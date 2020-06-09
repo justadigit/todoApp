@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <div class="container">
+        <form id="add-form">
+            <div class="form-row">
+                <label for="" class="col-12">Add an Item</label>
+              <div class="col-10">
+                <input type="text" class="form-control" placeholder="Enter an Item Name" name="newitem" id="newitem">
+              </div>
+              <div class="col-2">
+                <button type="submit" class="btn btn-primary col"> Add </button>
+              </div>
+            </div>
+        </form>
+        <br>
+        <ul class="list-group todo-list">
+            <li class="list-group-item align-item-right line">
+                <input type="checkbox" name="checkbox" for="list" checked>  
+                <span >Wakeup At 5:30 AM</span>
+                <i class="fas fa-edit edit text-primary" data-toggle="modal" data-target="#updateModal" value="aa"></i>
+                <i class="far fa-trash-alt delete text-danger"></i>
+            </li>
+            <li class="list-group-item align-item-right line">
+                <input type="checkbox" name="checkbox" for="list" checked>  
+                <span >Leave Office at 6:00 PM</span>
+                <i class="fas fa-edit edit text-primary" data-toggle="modal" data-target="#updateModal" value="aa"></i>
+                <i class="far fa-trash-alt delete text-danger"></i>
+            </li>
+            <li class="list-group-item align-item-right line">
+              <input type="checkbox" name="checkbox" for="list" checked>  
+              <span >Preparing for Meeting</span>
+              <i class="fas fa-edit edit text-primary" data-toggle="modal" data-target="#updateModal" value="aa"></i>
+              <i class="far fa-trash-alt delete text-danger"></i>
+            </li>
+            <li class="list-group-item align-item-right">
+              <input type="checkbox" name="checkbox" for="list">  
+              <span >Work From Home</span>
+              <i class="fas fa-edit edit text-primary" data-toggle="modal" data-target="#updateModal" value="aa"></i>
+              <i class="far fa-trash-alt delete text-danger"></i>
+            </li>
+        </ul>
+    </div>
+   
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="update-form">
+          <div class="form-row">
+            <div class="col-10">
+              <input type="text" class="form-control"  name="updateitem" id="updateitem">
+            </div>
+            <div class="col-2">
+              <button type="submit" class="btn btn-primary"> Update</button>
+            </div>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- jquery cdn -->
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+      <!-- bootstrap cdn -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- main js -->
+  <script src="js/app.js"></script>
+</body>
+</html>
